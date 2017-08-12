@@ -1,0 +1,56 @@
+{
+  "name": "clean-regexp-cli",
+  "version": "1.0.0",
+  "description": "Clean up regular expressions from the command line",
+  "main": "index.js",
+  "bin": {
+    "crgx": "./index.js"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsimonian/clean-regexp-cli.git"
+  },
+  "keywords": [
+    "regex",
+    "regexp",
+    "regular",
+    "expression",
+    "clean",
+    "cleanup",
+    "digit",
+    "word",
+    "cli",
+    "cmd",
+    "command",
+    "line",
+    "tool"
+  ],
+  "author": "Vartan Christopher Simonian <vsimonianpress@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vsimonian/clean-regexp-cli/issues"
+  },
+  "homepage": "https://github.com/vsimonian/clean-regexp-cli#readme",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "engineStrict": true,
+  "dependencies": {
+    "clean-regexp": "^1.0.0",
+    "ukaz": "^0.2.3"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "extends": [
+      "standard"
+    ]
+  }
+}
