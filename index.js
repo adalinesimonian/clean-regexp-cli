@@ -1,15 +1,18 @@
 #!/usr/bin/env node
 
-const ukaz = require('ukaz')
-const cleanRegexp = require('clean-regexp')
-const pkg = require('./package.json')
+import { createRequire } from 'node:module'
+import { Application } from 'ukaz'
+import cleanRegexp from 'clean-regexp'
 
-const app = new ukaz.Application(`${pkg.name} ${pkg.version}`)
+const require = createRequire(import.meta.url)
+const { name, version } = require('./package.json')
+
+const app = new Application(`${name} ${version}`)
   .description('Cleans up regular expressions.')
   .helpFlag()
   .validate()
   .arguments('<regular expressions...>')
-  .handler(async ({args}) => {
+  .handler(async ({ args }) => {
     if (!args.regularExpressions.present) {
       console.error('Error: No regular expressions supplied to clean up.')
       console.log()
@@ -19,7 +22,7 @@ const app = new ukaz.Application(`${pkg.name} ${pkg.version}`)
 
     const regexWithFlags = /^\/(.+)\/([gimuy]*)$/
 
-    args.regularExpressions.value.forEach(regex => {
+    for (const regex of args.regularExpressions.value) {
       try {
         const match = regexWithFlags.exec(regex)
         if (match) {
@@ -27,17 +30,17 @@ const app = new ukaz.Application(`${pkg.name} ${pkg.version}`)
         } else {
           console.log(cleanRegexp(regex))
         }
-      } catch (err) {
-        console.error(`Error while cleaning up regex ${regex}: ${err.message}`)
+      } catch (error) {
+        console.error(`Error while cleaning up regex ${regex}: ${error.message}`)
       }
-    })
+    }
   })
 
 app.run(process.argv)
-  .catch(err => {
-    if (err instanceof Error) {
-      console.error(`Error: ${err.message}`)
+  .catch(error => {
+    if (error instanceof Error) {
+      console.error(`Error: ${error.message}`)
     } else {
-      console.error(err)
+      console.error(error)
     }
   })
