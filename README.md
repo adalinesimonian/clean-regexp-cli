@@ -1,5 +1,5 @@
 # clean-regexp-cli
-[![Build Status](https://travis-ci.org/vsimonian/clean-regexp-cli.svg?branch=master)](https://travis-ci.org/vsimonian/clean-regexp-cli)
+[![Build Status](https://travis-ci.org/adalinesimonian/clean-regexp-cli.svg?branch=master)](https://travis-ci.org/adalinesimonian/clean-regexp-cli)
 
 Clean up regular expressions from the command line.
 
@@ -49,7 +49,7 @@ $ crgx '[0-9]+\.[a-zA-Z0-9_]?' '/[0-9]+\.[a-z0-9_]?/i'
 ## Internals
 
 - [clean-regexp](https://github.com/SamVerschueren/clean-regexp)
-- [ukaz](https://github.com/vsimonian/ukaz)
+- [ukaz](https://github.com/adalinesimonian/ukaz)
 
 ## Licence
 

@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vsimonian/clean-regexp-cli.git"
+    "url": "git+https://github.com/adalinesimonian/clean-regexp-cli.git"
   },
   "keywords": [
     "regex",
@@ -28,12 +28,12 @@
     "line",
     "tool"
   ],
-  "author": "Vartan Christopher Simonian <vsimonianpress@gmail.com>",
+  "author": "Adaline Valentina Simonian <adalinesimonian@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vsimonian/clean-regexp-cli/issues"
+    "url": "https://github.com/adalinesimonian/clean-regexp-cli/issues"
   },
-  "homepage": "https://github.com/vsimonian/clean-regexp-cli#readme",
+  "homepage": "https://github.com/adalinesimonian/clean-regexp-cli#readme",
   "engines": {
     "node": ">=8.0.0"
   },
